@@ -1,0 +1,23 @@
+Entry                     RecordName                Record Status    Section TimeTo Data   Data
+                                                    Type                     Live   Length
+-----                     ----------                ------ ------    ------- ------ ------ ----
+merchandise.opera-api.com merchandise.opera-api.com A      Success   Answer    2035      4 185.26.182.111
+merchandise.opera-api.com merchandise.opera-api.com A      Success   Answer    2035      4 185.26.182.112
+api.twitter.com           api.twitter.com           CNAME  Success   Answer    1007      8 tpop-api.twitter.com
+api.twitter.com           tpop-api.twitter.com      A      Success   Answer    1007      4 104.244.42.194
+api.twitter.com           tpop-api.twitter.com      A      Success   Answer    1007      4 104.244.42.130
+api.twitter.com           tpop-api.twitter.com      A      Success   Answer    1007      4 104.244.42.66
+api.twitter.com           tpop-api.twitter.com      A      Success   Answer    1007      4 104.244.42.2
+wpad.domain.name          wpad.domain.name          A      Success   Answer      74      4 185.38.111.1
+ocsp.digicert.com         ocsp.digicert.com         CNAME  Success   Answer      78      8 cs9.wac.phicdn.net
+ocsp.digicert.com         cs9.wac.phicdn.net        A      Success   Answer      78      4 72.21.91.29
+a.nel.cloudflare.com      a.nel.cloudflare.com      AAAA   Success   Answer   69384     16 2600:1901:0:47fc::
+a.nel.cloudflare.com      a.nel.cloudflare.com      A      Success   Answer   23189      4 35.190.80.1
+wpad                      wpad.domain.name          A      Success   Answer      74      4 185.38.111.1
+www.messenger.com         www.messenger.com         CNAME  Success   Answer      16      8 star.facebook.com
+www.messenger.com         star.facebook.com         CNAME  Success   Answer      16      8 star.c10r.facebook.com
+www.messenger.com         star.c10r.facebook.com    A      Success   Answer      16      4 69.171.250.15
+api.twitch.tv             api.twitch.tv             CNAME  Success   Answer      24      8 h2.twitch.map.fastly.net
+api.twitch.tv             h2.twitch.map.fastly.net  A      Success   Answer      24      4 199.232.10.214
+twitter.com               twitter.com               A      Success   Answer      95      4 104.244.42.129
+twitter.com               twitter.com               A      Success   Answer      95      4 104.244.42.65
