@@ -9,8 +9,8 @@ Function GetMyIPSync
 
 $initialIp = GetMyIPSync
 
-Write-Host "The ip that we will monitor is" $initialIp
-Write-Host "...press q to Quit or any key to Continue."
+Write-Host "La ip que monitorearemos es:" $initialIp
+Write-Host "...presiona q para Salir o cualquier otra tecla para continuar."
 $key = Read-Host
 if($key -eq 'q'){ Exit }
 
@@ -18,13 +18,13 @@ $currentIp = $initialIp
 $watch = [System.Diagnostics.Stopwatch]::StartNew()
 $isSecondChance = $FALSE
 while($currentIp -eq $initialIp){
-    Write-Host "everything's fine connected with ip" $currentIp
+    Write-Host "Todo esta bien conectado con la ip:" $currentIp
 
     $wc=New-Object net.webclient
     $result = $wc.downloadstringtaskasync("http://checkip.dyndns.com")
     if ($result.AsyncWaitHandle.WaitOne($timeOut) -eq $false) 
     { 
-        Write-Host "no connection within" $timeOut.TotalSeconds "seconds... second chance..."
+        Write-Host "no se ha podido conectar en:" $timeOut.TotalSeconds "segundos... intentando de nuevo..."
         if($isSecondChance){
 			break
 		}
@@ -40,8 +40,8 @@ while($currentIp -eq $initialIp){
     $wc.Dispose()
 }
 
-Write-Error "something's got wrong with ip... killing process..."
+Write-Error "Algo esta mal con la ip ... terminando proceso..."
 Get-Process | Where-Object{$_.ProcessName -match $processName} | ForEach-Object{ kill $_.Id}
-Write-Host $processName "killed after" $watch.Elapsed.TotalMinutes "minutes"
-Write-Host "Press any key to quit..."
+Write-Host $processName "terminado despues de:" $watch.Elapsed.TotalMinutes "minutos"
+Write-Host "Presiona cualquier tecla para terminar..."
 Read-Host
